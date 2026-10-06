@@ -11,8 +11,8 @@ modo = st.radio(
 
 # --- OPÇÃO 1: CRIPTOGRAFAR ---
 if modo.startswith("1"):
-    original = st.text_input("Digite o texto original (letras minúsculas):", "hello")
-    chave = st.number_input("Digite a chave (deslocamento):", min_value=1, value=3)
+    original = st.text_input("Digite o texto original (letras minúsculas):")
+    chave = st.number_input("Digite a chave (deslocamento):", min_value=1)
 
     if st.button("🔒 Criptografar"):
         cifrada = ""
@@ -32,8 +32,8 @@ if modo.startswith("1"):
 
 # --- OPÇÃO 2: DESCRIPTOGRAFAR ---
 elif modo.startswith("2"):
-    cifrada = st.text_input("Digite o texto cifrado:", "khoor")
-    chave = st.number_input("Digite a chave (deslocamento):", min_value=1, value=3)
+    cifrada = st.text_input("Digite o texto cifrado:")
+    chave = st.number_input("Digite a chave (deslocamento):", min_value=1)
 
     if st.button("🔓 Descriptografar"):
         original = ""
