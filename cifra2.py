@@ -25,6 +25,12 @@ if modo.startswith("1"):
                 if deslocamenteChave > 122:
                     deslocamenteChave = deslocamenteChave - 123 + 97
                 cifrada += chr(deslocamenteChave)
+            elif 'A' <= letra <= 'Z':
+                asciiLetra = ord(letra)
+                deslocamenteChave = asciiLetra + chave_efetiva
+                if deslocamenteChave > 90:
+                    deslocamenteChave = deslocamenteChave - 91 + 65
+                cifrada += chr(deslocamenteChave)
             else:
                 cifrada += letra  # Mantém espaços ou pontuações sem quebrar
 
@@ -46,6 +52,12 @@ elif modo.startswith("2"):
                 if deslocamenteChave < 97:
                     deslocamenteChave = deslocamenteChave + 123 - 97
                 original += chr(deslocamenteChave)
+            elif 'A' <= letra <= 'Z':
+                asciiLetra = ord(letra)
+                deslocamenteChave = asciiLetra - chave_efetiva
+                if deslocamenteChave < 65:
+                    deslocamenteChave = deslocamenteChave + 91 - 65
+                cifrada += chr(deslocamenteChave)
             else:
                 original += letra
 
@@ -66,6 +78,12 @@ elif modo.startswith("3"):
                     if deslocamenteChave < 97:
                         deslocamenteChave = deslocamenteChave + 123 - 97
                     original += chr(deslocamenteChave)
+                elif 'A' <= letra <= 'Z':
+                    asciiLetra = ord(letra)
+                    deslocamenteChave = asciiLetra - chave_efetiva
+                    if deslocamenteChave < 65:
+                        deslocamenteChave = deslocamenteChave + 91 - 65
+                    cifrada += chr(deslocamenteChave)              
                 else:
                     original += letra
 
