@@ -83,7 +83,7 @@ elif modo.startswith("3"):
                     deslocamenteChave = asciiLetra - chave
                     if deslocamenteChave < 65:
                         deslocamenteChave = deslocamenteChave + 91 - 65
-                    cifrada += chr(deslocamenteChave)              
+                    original += chr(deslocamenteChave)              
                 else:
                     original += letra
 
