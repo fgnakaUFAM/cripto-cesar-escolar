@@ -53,7 +53,7 @@ elif modo.startswith("2"):
 
 # --- OPÇÃO 3: FORÇA BRUTA ---
 elif modo.startswith("3"):
-    cifrada = st.text_input("Digite o texto cifrado para testar todas as chaves:", "khoor")
+    cifrada = st.text_input("Digite o texto cifrado para testar todas as chaves:")
 
     if st.button("🔎 Testar Todas as Chaves"):
         st.subheader("Tentativas de Descriptografia:")
