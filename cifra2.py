@@ -58,7 +58,7 @@ elif modo.startswith("2"):
                 deslocamenteChave = asciiLetra - chave_efetiva
                 if deslocamenteChave < 65:
                     deslocamenteChave = deslocamenteChave + 91 - 65
-                original += chr(deslocamenteChave)
+                original += chr(deslocamenteChave) 
             else:
                 original += letra
 
