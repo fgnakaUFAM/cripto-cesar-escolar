@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("🔐 Cifra de César")
-st.title("Autora: Gabriela Nakamura")
+st.write("Autora: Gabriela Nakamura")
 st.write("Escolha uma opção e teste a criptografia no seu celular!")
 
 # Substitui o input() de opção por botões de seleção (radio)
